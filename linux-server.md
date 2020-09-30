@@ -100,3 +100,7 @@ sudo snap install --classic certbot
 sudo certbot --nginx --register-unsafely-without-email
 sudo certbot renew --dry-run
 ```
+# Service
+```
+/etc/init.d/ssh start/stop/restart.
+```
