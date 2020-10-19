@@ -33,13 +33,17 @@ git pull origin dev
 ```
 # Checkout only one file
 ```sh
-git checkout branch_name path/to/app.js
+git checkout origin/branch_name -- path/to/app.js
 ```
 # Remove from git remote branch
 ```sh
 git rm --cached file1.txt
 git commit -m "remove file1.txt"
 git push origin branch_name
+```
+# Create empty branch on GitHub
+```sh
+git checkout --orphan branch_name
 ```
 # git-remote
 ```sh
@@ -66,7 +70,7 @@ git cherry-pick A..B
 ```
 # clone from specific branch
 ```sh
-git clone --branch qobogame https://github.com/USERNAME/REPOSITORY.git
+git clone --branch branch_name https://github.com/USERNAME/REPOSITORY.git
 ```
 # GPG
 ```sh
@@ -109,7 +113,7 @@ git config user.signingkey #<KEY>
 
 # Set git config gpg.program
 git config gpg.program gpg
-git config gpg.program "C:\Program Files (x86)\GnuPG\bin"
+git config gpg.program "C:\Program Files (x86)\GnuPG\bin\gpg.exe"
 
 # Git sign commit
 git commit -S -m "Sign Commit"
