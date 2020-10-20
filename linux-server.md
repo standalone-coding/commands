@@ -82,7 +82,12 @@ sudo apt-get install -y phpmyadmin php5.6-mbstring php5.6-gettext php5.6-mysqli
 sudo service apache2 restart
 ```
 ---
-
+# Update NodeJS
+```sh
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+sudo apt-get install -y nodejs
+```
+---
 # Redis
 ```
 sudo apt-get install redis-server
