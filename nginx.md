@@ -1,13 +1,11 @@
 ### Port forwarding for apache2
-```json
-location ~* \.php$ {
-	proxy_pass http://127.0.0.1:81;
-  proxy_set_header Host $host;
-  proxy_set_header X-Real-IP $remote_addr;
-  proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-  proxy_set_header X-Forwarded-Proto $scheme;
-}
-```
+> location ~* \.php$ {
+> 	proxy_pass http://127.0.0.1:81;
+> 	proxy_set_header Host $host;
+> 	proxy_set_header X-Real-IP $remote_addr;
+> 	proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+> 	proxy_set_header X-Forwarded-Proto $scheme;
+> }
 ### Enable php-fpm
 ```sh
 # Install PHP
@@ -25,16 +23,15 @@ sudo nano /etc/php/7.3/fpm/php.ini
 # Start PHP-fpm service
 sudo service php7.4-fpm start
 ```
-```json
+```sh
 sudo nano /etc/nginx/sites-available/default
-
-location ~* \.php$ {
-	fastcgi_pass unix:/var/run/php/php7.4-fpm.sock;
-	include fastcgi_params;
-	fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
-	fastcgi_param SCRIPT_NAME $fastcgi_script_name;
-}
 ```
+> location ~* \.php$ {
+> 	fastcgi_pass unix:/var/run/php/php7.4-fpm.sock;
+> 	include fastcgi_params;
+> 	fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+> 	fastcgi_param SCRIPT_NAME $fastcgi_script_name;
+> }
 ### Test nginx config
 ```sh
 sudo nginx -t
