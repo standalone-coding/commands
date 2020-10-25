@@ -1,0 +1,10 @@
+URL, REQUEST, HEADERS
+
+adb -d logcat <package-name>:VERBOSE *:S
+
+ASSERT
+DEBUG
+ERROR
+INFO
+VERBOSE
+WARN
