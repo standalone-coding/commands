@@ -169,4 +169,8 @@ git config merge.tool npp
 git mergetool --tool=npp
 git mergetool -t npp
 git config mergetool.npp.path "<executable-path>.exe"
+git config mergetool.sublime.cmd "subl -w \$MERGED"
+git config mergetool.sublime.trustExitCode false 
+git config merge.tool sublime
+git mergetool -y
 ```
