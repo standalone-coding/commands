@@ -147,3 +147,19 @@ git rev-list --count branch_name
 git config help.autocorrect 1
 git config --global help.autocorrect 1
 ```
+#### Graphical alternative
+```sh
+git gui
+# Open GUI tool.
+git citool
+# Gitk user interface.
+gitk
+```
+#### zip your entire branch
+```sh
+git archive --format zip --output file-name.zip branch_name
+```
+#### Amending the most recent commit message
+```sh
+git commit --amend -m "New commit message"
+```
