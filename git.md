@@ -118,3 +118,32 @@ git config gpg.program "C:\Program Files (x86)\GnuPG\bin\gpg.exe"
 # Git sign commit
 git commit -S -m "Sign Commit"
 ```
+#### Search in Git
+```sh
+git rev-list --all | xargs git grep -F '<PATTERN>'
+```
+#### Viewing other branch files
+```sh
+git show main:<path/to/file>
+```
+#### current state of HEAD:
+```sh
+cat .git/HEAD
+```
+#### backup of untracked files
+```sh
+git ls-files --others --exclude-standard -z | xargs -0 tar rvf ~/<file-name>.zip
+```
+####  Optimize your repository
+```sh
+git gc --prune=now --aggressive
+```
+#### Counting commits
+```sh
+git rev-list --count branch_name
+```
+#### Auto-correction in Git
+```sh
+git config help.autocorrect 1
+git config --global help.autocorrect 1
+```
