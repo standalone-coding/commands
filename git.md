@@ -163,3 +163,10 @@ git archive --format zip --output file-name.zip branch_name
 ```sh
 git commit --amend -m "New commit message"
 ```
+#### Resolution tools to resolve merge conflicts
+```sh
+git config merge.tool npp
+git mergetool --tool=npp
+git mergetool -t npp
+git config mergetool.npp.path "<executable-path>.exe"
+```
