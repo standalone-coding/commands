@@ -1,4 +1,4 @@
-# SSH key
+#### SSH key
 ```sh
 # generate key
 ssh-keygen -t ssh-rsa -b 4096 -C "name@github.com"
@@ -12,7 +12,7 @@ ssh-add #<generated key>
 # test connection
 ssh -T git@github.com
 ```
-# Store Settings
+#### Store Settings
 ```sh
 git config user.name "GitHub Name"
 git config user.email "name@example.com"
@@ -22,41 +22,41 @@ git config --global credential.helper cache
 # set default commit editor
 git config core.editor "vim" or "path of executable file"
 ```
-# Commit without setting user.email and user.name
+#### Commit without setting user.email and user.name
 ```sh
 git -c user.name='Paul Draper' -c user.email='my@email.org' commit -m '...'
 git config alias.ccommit "-c user.name='Name' -c user.email='my@email.org' commit -S -m"
 ```
-# Pull From Another Branch
+#### Pull From Another Branch
 ```sh
 git pull origin dev
 ```
-# Checkout only one file
+#### Checkout only one file
 ```sh
 git checkout origin/branch_name -- path/to/app.js
 ```
-# Remove from git remote branch
+#### Remove from git remote branch
 ```sh
 git rm --cached file1.txt
 git commit -m "remove file1.txt"
 git push origin branch_name
 ```
-# Create empty branch on GitHub
+#### Create empty branch on GitHub
 ```sh
 git checkout --orphan branch_name
 ```
-# git-remote
+#### git-remote
 ```sh
 git remote add origin #<YOUR-REPO-URL>
 git remote set-url origin #<YOUR-REPO-URL>
 git remote remove origin
 ```
-# Remove commit from remote
+#### Remove commit from remote
 ```sh
 git reset --hard HEAD~1
 git push --force
 ```
-# git DELETE Branch
+#### git DELETE Branch
 ```sh
 git checkout -b release master    # Create and switch to the release branch
 git push -u origin release        # Push the release branch to the remote and track it
@@ -64,15 +64,15 @@ git branch -d master              # Delete local master
 git push --delete origin master   # Delete remote master
 git remote prune origin           # Delete the remote tracking branch
 ```
-# cherry-pick
+#### cherry-pick
 ```sh
 git cherry-pick A..B
 ```
-# clone from specific branch
+#### clone from specific branch
 ```sh
 git clone --branch branch_name https://github.com/USERNAME/REPOSITORY.git
 ```
-# GPG
+#### GPG
 ```sh
 # lesser option
 gpg --gen-key
