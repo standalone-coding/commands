@@ -24,3 +24,8 @@ CREATE TABLE DB.TABLE LIKE DB.TABLE;
 ```sh
 mysql -u USER -pPASSWORD -h IP -P PORT -D DATABASE
 ```
+### Set timezone
+```mysql
+SET GLOBAL time_zone = '+5:30';
+SELECT now();
+```
