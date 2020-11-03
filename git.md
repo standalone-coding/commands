@@ -27,6 +27,13 @@ git config core.editor "vim" or "path of executable file"
 git -c user.name='Paul Draper' -c user.email='my@email.org' commit -m '...'
 git config alias.ccommit "-c user.name='Name' -c user.email='my@email.org' commit -S -m"
 ```
+#### LF/CRLF
+```sh
+# Deactivate crlf in windows.
+git config core.autocrlf false
+# Get rid of the warnings.
+git config core.autocrlf true
+```
 #### Pull From Another Branch
 ```sh
 git pull origin dev
