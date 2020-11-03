@@ -44,6 +44,9 @@ git push origin branch_name
 #### Create empty branch on GitHub
 ```sh
 git checkout --orphan branch_name
+git rm -rf .
+git commit --allow-empty -m "root commit"
+git push origin branch_name
 ```
 #### git-remote
 ```sh
